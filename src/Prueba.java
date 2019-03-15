@@ -1,12 +1,13 @@
 // Java program to illustrate Deadlock 
 // in multithreading. 
+
 class Util { 
-    // Util class to sleep a thread 
+	
+	// Util class to sleep a thread 
     static void sleep(long millis) { 
         try { 
             Thread.sleep(millis); 
-        } 
-        catch (InterruptedException e) { 
+        } catch (InterruptedException e) { 
             e.printStackTrace(); 
         } 
     } 
@@ -14,7 +15,8 @@ class Util {
   
 // This class is shared by both threads 
 class Shared { 
-    // first synchronized method 
+    
+	// first synchronized method 
     synchronized void test1(Shared s2) { 
         System.out.println("test1-begin"); 
         Util.sleep(1000); 
@@ -82,6 +84,7 @@ class Thread2 extends Thread {
 public class Prueba {
 
 	public static void main(String[] args) {
+		
 		// creating one object 
         Shared s1 = new Shared(); 
   
